@@ -22,3 +22,6 @@ while True:
     screen.fill((0, 0, 0))
     pygame.display.flip()
     clock.tick(FPS)
+
+
+    
