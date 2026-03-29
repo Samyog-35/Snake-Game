@@ -1,5 +1,7 @@
 import pygame
 import sys
+from sprites import Snake
+from utility import get_asset_path
 
 pygame.init()
 
