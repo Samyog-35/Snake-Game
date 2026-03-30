@@ -123,3 +123,59 @@ class Grape(Food):
 
     def __repr__(self):
         return f"Grape(x={self._x}, y={self._y})"
+    class Peach(Food):
+     """Peach — orange, 30 points."""
+
+    def __init__(self, x, y):
+        """Creates a Peach at position x, y."""
+        super().__init__(x, y)
+        self._points = 30
+
+    def draw(self, screen):
+        """Draws an orange peach."""
+        x = self._x * 20
+        y = self._y * 20
+        pygame.draw.rect(screen, (255, 160, 80), (x, y, 18, 18))
+
+    def __str__(self):
+        return f"Peach at ({self._x}, {self._y})"
+
+    def __repr__(self):
+        return f"Peach(x={self._x}, y={self._y})"
+
+
+class Obstacle:
+    """A wall the snake must avoid."""
+
+    def __init__(self, x, y, w, h):
+        """
+        Creates an obstacle block.
+        x, y: position on grid
+        w, h: width and height in grid cells
+        """
+        self._x = x
+        self._y = y
+        self._w = w
+        self._h = h
+
+    def get_cells(self):
+        """Returns all grid cells this obstacle covers."""
+        cells = []
+        for dx in range(self._w):
+            for dy in range(self._h):
+                cells.append((self._x + dx, self._y + dy))
+        return cells
+
+    def draw(self, screen):
+        """Draws the obstacle as a dark brown rectangle."""
+        x = self._x * 20
+        y = self._y * 20
+        w = self._w * 20
+        h = self._h * 20
+        pygame.draw.rect(screen, (60, 40, 20), (x, y, w, h))
+
+    def __str__(self):
+        return f"Obstacle at ({self._x}, {self._y})"
+
+    def __repr__(self):
+        return f"Obstacle(x={self._x}, y={self._y})"
