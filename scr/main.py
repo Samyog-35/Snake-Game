@@ -99,7 +99,16 @@ while True:
 
     score_text = font.render(f"Score: {score}", True, (255, 255, 255))
     screen.blit(score_text, (10, 10))
-    #message for game over
+
+
+
+
+
+    #message for game over or any (screen,(28,32,46),(100,150,400,200))(game .rec(ren))
+    
+    
+    
+    
     if game_over:
         pygame.draw.rect(screen,(28,32,46),(100,150,400,200))
 
