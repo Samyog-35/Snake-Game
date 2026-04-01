@@ -1,7 +1,7 @@
 import pygame
 import sys
 import random
-from sprites import Snake, Food, Apple, Berry, Peach, Grape, Obstacle
+from sprites import Snake, Food , Apple, Berry, Peach, Grape, Obstacle
 from utility import get_asset_path
 
 pygame.init()
@@ -19,8 +19,11 @@ font   = pygame.font.SysFont("arial", 22, bold=True)
 FPS    = 60
 
 # create snake in the middle
+    
 snake = Snake(COLS // 2, ROWS // 2)
 score = 0
+game_over = False
+death_cause = ""
 
 # spawn random food
 def spawn_food():
@@ -52,25 +55,37 @@ while True:
                 snake.direction = (-1, 0)
             elif event.key == pygame.K_RIGHT:
                 snake.direction = (1, 0)
+            elif event.key == pygame.K_r and game_over:
+               #reset everything
+               snake = Snake(COLS//2,ROWS//2)
+               score = 0
+               game_over = False
+               death_cause = ""
+               food = spawn_food()
 
-    # move snake on timer
-    move_timer += dt
-    if move_timer >= move_delay:
-        move_timer = 0.0
-        snake.move()
+        # move snake on timer
+    if not game_over:
+            move_timer += dt
+            if move_timer >= move_delay:
+                move_timer = 0.0
+                snake.move()
+                # wall collision
+                hx, hy = snake.segments[0]
+                if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
+                    game_over = True
+                    death_cause = "You hit The wall!!!" 
 
-        # wall collision
-        hx, hy = snake.segments[0]
-        if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS:
-            print(f"Game Over! Score: {score}")
-            pygame.quit()
-            sys.exit()
+                #self collision 
+                if snake.segments[0]in snake.segments[1:]:
+                    game_over = True
+                    death_cause = "you bit yourself"
 
-        # ate food
-        if snake.segments[0] == food.get_pos():
-            score += food.get_points()
-            snake.segments.append(snake.segments[-1])
-            food = spawn_food()
+
+                 # ate food
+                if snake.segments[0] == food.get_pos():
+                    score += food.get_points()
+                    snake.segments.append(snake.segments[-1])
+                    food = spawn_food()
 
     # draw
     screen.fill((18, 20, 28))
@@ -84,5 +99,27 @@ while True:
 
     score_text = font.render(f"Score: {score}", True, (255, 255, 255))
     screen.blit(score_text, (10, 10))
+    #message for game over
+    if game_over:
+        pygame.draw.rect(screen,(28,32,46),(100,150,400,200))
 
+
+         #game over text
+        over_text = font.render("GAME OVER", True,(230,80,60))
+        screen.blit(over_text,(220,170))
+
+
+        #death cause
+        cause_text = font.render(death_cause, True,(255,255,255))
+        screen.blit(cause_text,(150,220))
+
+
+        #final score
+        score_text2 = font.render(f"Final Score: {score}",True,(80,225,120))
+        screen.blit(score_text2,(190,260))
+
+
+        #restart hint
+        hint_text = font.render("Press R to restart",True,(255,255,255))
+        screen.blit( hint_text,(180,300))
     pygame.display.flip()
