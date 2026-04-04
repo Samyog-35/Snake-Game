@@ -68,7 +68,7 @@ while True:
             move_timer += dt
             if move_timer >= move_delay:
              move_timer = 0.0
-             snake.move()
+            snake.move()
                 # wall collision
             hx, hy = snake.segments[0]
             if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
