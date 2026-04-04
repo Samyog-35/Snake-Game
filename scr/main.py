@@ -24,6 +24,7 @@ snake = Snake(COLS // 2, ROWS // 2)
 score = 0
 game_over = False
 death_cause = ""
+state = "Start"
 
 # spawn random food
 def spawn_food():
@@ -37,6 +38,14 @@ food = spawn_food()
 # move timer
 move_delay = 0.15
 move_timer = 0.0
+
+def draw_start_screen():
+ """ draws a screen """
+ screen.fill((18,20,28))
+ title = font.render("SNAKE Game",True,(80,200,120))
+
+ 
+
 
 while True:
     dt = clock.tick(FPS) / 1000.0
