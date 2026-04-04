@@ -46,6 +46,8 @@ title = font.render("SNAKE Game",True,(80,200,120))
 screen.blit(title(220,150))
 prompt = font.render("Press Enter Key To Play",True, (225,225,25))
 screen.blit(title(185,230))
+controls = font.render("Arrow Key To Move",True,(130,138,160))
+
 
  
 
