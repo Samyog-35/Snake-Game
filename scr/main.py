@@ -76,7 +76,7 @@ while True:
                 death_cause = "You hit The wall!!!" 
 
                 #self collision 
-            if snake.segments[0]in snake.segments[1:]:
+            if snake.segments[0] in snake.segments[1:]:
                 game_over = True
                 death_cause = "you bit yourself"
 
