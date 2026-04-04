@@ -70,7 +70,7 @@ while True:
             move_timer = 0.0
             snake.move()
                 # wall collision
-        hx, hy = snake.segments[0]
+            hx, hy = snake.segments[0]
         if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
             game_over = True
             death_cause = "You hit The wall!!!" 
