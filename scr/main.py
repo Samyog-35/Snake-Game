@@ -61,6 +61,8 @@ while True:
             pygame.quit()
             sys.exit()
         if event.type == pygame.KEYDOWN:
+            
+
             if event.key == pygame.K_UP:
                 snake.direction = (0, -1)
             elif event.key == pygame.K_DOWN:
