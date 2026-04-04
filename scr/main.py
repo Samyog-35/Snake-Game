@@ -65,27 +65,27 @@ while True:
 
         # move snake on timer
     if not game_over:
-        move_timer += dt
-        if move_timer >= move_delay:
-            move_timer = 0.0
-            snake.move()
-            # wall collision
+            move_timer += dt
+            if move_timer >= move_delay:
+             move_timer = 0.0
+             snake.move()
+                # wall collision
             hx, hy = snake.segments[0]
-        if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
-            game_over = True
-            death_cause = "You hit The wall!!!" 
+            if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
+                game_over = True
+                death_cause = "You hit The wall!!!" 
 
-            #self collision 
-        if snake.segments[0]in snake.segments[1:]:
-            game_over = True
-            death_cause = "you bit yourself"
+                #self collision 
+            if snake.segments[0]in snake.segments[1:]:
+                game_over = True
+                death_cause = "you bit yourself"
 
 
-            # ate food
-        if snake.segments[0] == food.get_pos():
-            score += food.get_points()
-            snake.segments.append(snake.segments[-1])
-            food = spawn_food()
+                # ate food
+            if snake.segments[0] == food.get_pos():
+                score += food.get_points()
+                snake.segments.append(snake.segments[-1])
+                food = spawn_food()
 
     # draw
     screen.fill((18, 20, 28))
