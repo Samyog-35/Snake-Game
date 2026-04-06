@@ -109,7 +109,6 @@ while True:
     if state == "start":
         draw_start_screen()
     elif state == "game":
-        screen.fill((18, 20, 28))
         food.draw(screen)
 #avariable for 
     if state == "game":
