@@ -41,7 +41,7 @@ def spawn_obstacles(count=5):
     for _ in range(count):
         x = random.randint(0, COLS - 1)
         y = random.randint(0, ROWS - 1)
-        obs.append(Obstacle(x, y))
+        obs.append(Obstacle(x, y,1,1))
         return obs
 obstacle = spawn_obstacles()
 
@@ -99,6 +99,11 @@ while True:
         if move_timer >= move_delay:
             move_timer = 0.0
             snake.move()
+            #obstacle collision 
+            for ob in obstacles:
+                if snake.segments[0] == ob.get_pos():
+                    game_over = True
+                    death_cause = "You hit the Obstacles!!!"
                 # wall collision
             hx, hy = snake.segments[0]
             if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
