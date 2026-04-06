@@ -161,7 +161,7 @@ class Obstacle:
         y = self._y * 20
         w = self._w * 20
         h = self._h * 20
-        pygame.draw.rect(screen, (60, 40, 20), (x, y, w, h))
+        pygame.draw.rect(screen, (255, 255, 255), (x, y, w, h))
 
     def __str__(self):
         return f"Obstacle at ({self._x}, {self._y})"
