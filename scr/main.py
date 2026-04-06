@@ -148,3 +148,7 @@ while True:
         hint_text = font.render("Press R to restart",True,(255,255,255))
         screen.blit( hint_text,(180,300))
     pygame.display.flip()
+    if state == "start":
+        draw_start_screen()
+    elif state == "game":
+        screen.fill((18, 20, 28))
