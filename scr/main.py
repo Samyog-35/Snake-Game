@@ -105,7 +105,11 @@ while True:
 
     # draw
     screen.fill((18, 20, 28))
-
+    if state == "start":
+        draw_start_screen()
+    elif state == "game":
+        screen.fill((18, 20, 28))
+        food.draw(screen)
     food.draw(screen)
 #avariable for 
     for i, (gx, gy) in enumerate(snake.segments):
@@ -147,9 +151,5 @@ while True:
         #restart hint
         hint_text = font.render("Press R to restart",True,(255,255,255))
         screen.blit( hint_text,(180,300))
-    if state == "start":
-        draw_start_screen()
-    elif state == "game":
-        screen.fill((18, 20, 28))
-        food.draw(screen)
+    
     pygame.display.flip()
