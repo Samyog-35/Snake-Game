@@ -110,8 +110,6 @@ while True:
         draw_start_screen()
     elif state == "game":
         food.draw(screen)
-#avariable for 
-    if state == "game":
         for i, (gx, gy) in enumerate(snake.segments):
             color = (50, 200, 80) if i == 0 else (30, 160, 60)
             pygame.draw.rect(screen, color,
