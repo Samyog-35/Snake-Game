@@ -110,7 +110,6 @@ while True:
     elif state == "game":
         screen.fill((18, 20, 28))
         food.draw(screen)
-    food.draw(screen)
 #avariable for 
     for i, (gx, gy) in enumerate(snake.segments):
         color = (50, 200, 80) if i == 0 else (30, 160, 60)
