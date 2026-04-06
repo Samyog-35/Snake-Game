@@ -80,7 +80,7 @@ while True:
                food = spawn_food()
 
         # move snake on timer
-    if not game_over:
+    if state == "game" and not game_over:
         move_timer += dt
         if move_timer >= move_delay:
             move_timer = 0.0
