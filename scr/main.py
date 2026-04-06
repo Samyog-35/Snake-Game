@@ -111,9 +111,10 @@ while True:
         screen.fill((18, 20, 28))
         food.draw(screen)
 #avariable for 
-    for i, (gx, gy) in enumerate(snake.segments):
-        color = (50, 200, 80) if i == 0 else (30, 160, 60)
-        pygame.draw.rect(screen, color,
+    if state == "game":
+        for i, (gx, gy) in enumerate(snake.segments):
+            color = (50, 200, 80) if i == 0 else (30, 160, 60)
+            pygame.draw.rect(screen, color,
                         (gx * CELL + 2, gy * CELL + 2, CELL - 4, CELL - 4))
 
     score_text = font.render(f"Score: {score}", True, (255, 255, 255))
