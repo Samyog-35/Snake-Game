@@ -24,7 +24,7 @@ snake = Snake(COLS // 2, ROWS // 2)
 score = 0
 game_over = False
 death_cause = ""
-state = "Start"
+state = "start"
 
 # spawn random food
 def spawn_food():
