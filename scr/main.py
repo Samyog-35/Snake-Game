@@ -84,6 +84,7 @@ while True:
             elif event.key == pygame.K_RIGHT:
                 snake.direction = (1, 0)
             elif event.key == pygame.K_r and game_over:
+               obstacles = spawn_obstacles()
                #reset everything
                snake = Snake(COLS//2,ROWS//2)
                score = 0
