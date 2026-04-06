@@ -34,7 +34,16 @@ def spawn_food():
     return random.choice([Apple, Berry, Peach, Grape])(x, y)
 
 food = spawn_food()
+obstacles = []
 
+def spawn_obstacles(count=5):
+    obs = []
+    for _ in range(count):
+        x = random.randint(0, COLS - 1)
+        y = random.randint(0, ROWS - 1)
+        obs.append(Obstacle(x, y))
+        return obs
+Obstacle = spawn_obstacles()
 
 # move timer
 move_delay = 0.15
