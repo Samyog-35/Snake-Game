@@ -46,8 +46,7 @@ def draw_start_screen():
     screen.blit(title, (220, 150))
     prompt = font.render("Press Enter Key To Play", True, (225,225,25))
     screen.blit(prompt, (185, 230))
-    controls = font.render("Use Arrow Key To Move the snake/" \
-    "", True,(130,138,160))
+    controls = font.render("Use Arrow Key To Move the snake eat fruits and surive", True,(130,138,160))
     screen.blit(controls,(190,280))
 
  
