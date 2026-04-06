@@ -49,7 +49,7 @@ def draw_start_screen():
     controls = font.render("Use Arrow Key To Move the snake", True,(130,138,160))
     screen.blit(controls,(190,280))
     controls = font.render("Eat fruits and surive", True,(130,138,160))
-    screen.blit(controls,(280,300))
+    screen.blit(controls,(210,320))
 
  
 
