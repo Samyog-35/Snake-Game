@@ -78,6 +78,7 @@ while True:
                game_over = False
                death_cause = ""
                food = spawn_food()
+               state = "game"
 
         # move snake on timer
     if state == "game" and not game_over:
