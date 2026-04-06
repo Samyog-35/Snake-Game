@@ -101,7 +101,7 @@ while True:
             snake.move()
             #obstacle collision 
             for ob in obstacles:
-                if snake.segments[0] == ob.get_pos():
+                if snake.segments[0] == (ob.x, ob.y):
                     game_over = True
                     death_cause = "You hit the Obstacles!!!"
                 # wall collision
