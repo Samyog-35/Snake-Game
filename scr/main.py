@@ -43,7 +43,7 @@ def spawn_obstacles(count=5):
         y = random.randint(0, ROWS - 1)
         obs.append(Obstacle(x, y,1,1))
     return obs
-obstacle = spawn_obstacles()
+obstacles = spawn_obstacles()
 
 # move timer
 move_delay = 0.15
