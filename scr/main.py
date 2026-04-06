@@ -24,6 +24,13 @@ snake = Snake(COLS // 2, ROWS // 2)
 score = 0
 game_over = False
 death_cause = ""
+snake_colors = [
+    ((50, 200, 80), (30, 160, 60)),   # green
+    ((200, 50, 50), (160, 30, 30)),   # red
+    ((50, 100, 220), (30, 70, 180)),  # blue
+    ((220, 180, 50), (180, 140, 30))  # yellow
+]
+color_index = 0
 state = "start"
 
 # spawn random food
