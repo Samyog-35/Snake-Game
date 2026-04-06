@@ -35,6 +35,7 @@ def spawn_food():
 
 food = spawn_food()
 
+
 # move timer
 move_delay = 0.15
 move_timer = 0.0
