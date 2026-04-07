@@ -148,7 +148,7 @@ while True:
         for ob in obstacles:
             ob.draw(screen)
         for i, (gx, gy) in enumerate(snake.segments):
-            color = (50, 200, 80) if i == 0 else (30, 160, 60)
+            color = skins[current_skin] if i == 0 else (30, 160, 60)
             pygame.draw.rect(screen, color,
                         (gx * CELL + 2, gy * CELL + 2, CELL - 4, CELL - 4))
 
