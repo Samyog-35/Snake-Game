@@ -24,12 +24,14 @@ snake = Snake(COLS // 2, ROWS // 2)
 score = 0
 game_over = False
 death_cause = ""
-snake_colors = [
-    ((50, 200, 80), (30, 160, 60)),   # green
-    ((200, 50, 50), (160, 30, 30)),   # red
-    ((50, 100, 220), (30, 70, 180)),  # blue
-    ((220, 180, 50), (180, 140, 30))  # yellow
-]
+# skin colours
+skins = {
+    "Green": (50, 200, 80),
+    "Red":   (220, 50, 50),
+    "Blue":  (50, 130, 220),
+    "Gold":  (220, 180, 30),
+}
+current_skin = "Green"
 color_index = 0
 state = "start"
 
