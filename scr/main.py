@@ -101,7 +101,14 @@ while True:
                death_cause = ""
                food = spawn_food()
                state = "game"
-               
+            elif event.key == pygame.K_1:
+                current_skin = "Green"
+            elif event.key == pygame.K_2:
+                current_skin = "Red"
+            elif event.key == pygame.K_3:
+                current_skin = "Blue"
+            elif event.key == pygame.K_4:
+                current_skin = "Gold"
 
         # move snake on timer
     if state == "game" and not game_over:
