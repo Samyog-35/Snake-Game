@@ -113,6 +113,9 @@ while True:
 
         # move snake on timer
     if state == "game" and not game_over:
+        starve_timer -= dt
+        if starve_timer <= 0: 
+            game_over = True 
         move_timer += dt
         if move_timer >= move_delay:
             move_timer = 0.0
