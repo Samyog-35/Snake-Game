@@ -116,6 +116,8 @@ while True:
         starve_timer -= dt
         if starve_timer <= 0: 
             game_over = True 
+            death_cause = "You starved to death!"  
+        move_timer += dt
         move_timer += dt
         if move_timer >= move_delay:
             move_timer = 0.0
