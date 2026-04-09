@@ -137,6 +137,7 @@ while True:
                 # ate food
             if snake.segments[0] == food.get_pos():
                 score += food.get_points()
+                starve_timer = 10.0
                 snake.segments.append(snake.segments[-1])
                 food = spawn_food()
 
