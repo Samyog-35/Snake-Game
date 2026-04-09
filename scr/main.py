@@ -151,6 +151,8 @@ while True:
     if state == "start":
         draw_start_screen()
     elif state == "game":
+        timer_color = (230, 80, 60) if starve_timer < 4 else (255, 255, 255)
+        
         food.draw(screen)
         for ob in obstacles:
             ob.draw(screen)
