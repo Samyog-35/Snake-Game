@@ -150,6 +150,8 @@ while True:
         for i, (gx, gy) in enumerate(snake.segments):
             if i == 0:
                 color = skins[current_skin]        # head
+            else:
+                color = tuple(c // 2 for c in skins[current_skin])
             
             pygame.draw.rect(screen, color,
                         (gx * CELL + 2, gy * CELL + 2, CELL - 4, CELL - 4))
