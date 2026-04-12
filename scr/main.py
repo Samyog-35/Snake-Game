@@ -44,6 +44,7 @@ def spawn_food():
     return random.choice([Apple, Berry, Peach, Grape])(x, y)
 
 food = spawn_food()
+
 obstacles = []
 
 def spawn_obstacles(count=5):
