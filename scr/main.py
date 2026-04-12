@@ -42,8 +42,13 @@ def spawn_food():
     while True:
         x = random.randint(0, COLS - 1)
         y = random.randint(0, ROWS - 1)
-        bloked = False
-        
+        blocked = False
+        for ob in obstacles:
+            if (x, y) in ob.get_cells():
+                blocked = True
+        if not blocked:
+            return random.choice([Apple, Berry, Peach, Grape])(x, y)
+
     
 
 food = spawn_food()
