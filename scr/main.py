@@ -152,8 +152,9 @@ while True:
         draw_start_screen()
     elif state == "game":
         timer_color = (230, 80, 60) if starve_timer < 4 else (255, 255, 255)
-        
-        food.draw(screen)
+        timer_text = font.render(f"Time: {int(starve_timer)}", True, timer_color)
+        screen.blit(timer_text,
+        food.draw(screen), (SCREEN_W // 2 - 30, 10))
         for ob in obstacles:
             ob.draw(screen)
         for i, (gx, gy) in enumerate(snake.segments):
