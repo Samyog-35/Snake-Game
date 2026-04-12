@@ -39,9 +39,12 @@ state = "start"
 # spawn random food
 def spawn_food():
     """Spawns random food at a random spot."""
-    x = random.randint(0, COLS - 1)
-    y = random.randint(0, ROWS - 1)
-    return random.choice([Apple, Berry, Peach, Grape])(x, y)
+    while True:
+        x = random.randint(0, COLS - 1)
+        y = random.randint(0, ROWS - 1)
+        bloked = False
+        
+    
 
 food = spawn_food()
 
