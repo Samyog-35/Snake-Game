@@ -94,14 +94,15 @@ while True:
             elif event.key == pygame.K_RIGHT:
                 snake.direction = (1, 0)
             elif event.key == pygame.K_r and game_over:
-               obstacles = spawn_obstacles()
+                obstacles = spawn_obstacles()
+                starve_timer = 10.0
                #reset everything
-               snake = Snake(COLS//2,ROWS//2)
-               score = 0
-               game_over = False
-               death_cause = ""
-               food = spawn_food()
-               state = "game"
+                snake = Snake(COLS//2,ROWS//2)
+                score = 0
+                game_over = False
+                death_cause = ""
+                food = spawn_food()
+                state = "game"
             elif event.key == pygame.K_1:
                 current_skin[0] = "Green"
             elif event.key == pygame.K_2:
