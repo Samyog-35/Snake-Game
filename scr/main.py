@@ -152,6 +152,7 @@ while True:
     elif state == "game":
         timer_color = (230, 80, 60) if starve_timer < 4 else (255, 255, 255)
         timer_text = font.render(f"Time: {int(starve_timer)}", True, timer_color)
+        food.draw(screen)
         screen.blit(timer_text, (SCREEN_W // 2 - 30, 10))
         for ob in obstacles:
             ob.draw(screen)
