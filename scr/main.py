@@ -32,7 +32,7 @@ skins = {
     "Blue":  (50, 130, 220),
     "Gold":  (220, 180, 30),
 }
-current_skin = "Green"
+current_skin = ["Green"]
 color_index = 0
 state = "start"
 
