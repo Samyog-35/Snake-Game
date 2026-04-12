@@ -35,7 +35,7 @@ skins = {
 current_skin = ["Green"]
 color_index = 0
 state = "start"
-
+obstacles = []
 # spawn random food
 def spawn_food():
     """Spawns random food at a random spot."""
@@ -53,7 +53,6 @@ def spawn_food():
 
 food = spawn_food()
 
-obstacles = []
 
 def spawn_obstacles(count=5):
     obs = []
