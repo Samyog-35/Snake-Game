@@ -111,7 +111,7 @@ while True:
                 game_over = False
                 death_cause = ""
                 food = spawn_food()
-                
+                speed_boost_timer[0] = 0.0
                 state = "game"
             elif event.key == pygame.K_1:
                 current_skin[0] = "Green"
