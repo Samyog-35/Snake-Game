@@ -127,10 +127,11 @@ while True:
         if starve_timer <= 0: 
             game_over = True 
             death_cause = "You starved to death!" 
+        if speed_boost_timer[0] > 0:
+            speed_boost_timer[0] -= dt
+        
+         # slow down as timer runs out
 
-
-            # slow down as timer runs out
-            
         move_delay = 0.15 + (10.00 - starve_timer) * 0.015
         move_timer += dt
         if move_timer >= move_delay:
