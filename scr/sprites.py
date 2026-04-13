@@ -150,8 +150,9 @@ class Obstacle:
         self._h = h
 
         try:
-            self._image = pygame.image.load("assets/brick.png").convert_alpha()
-            self._image = pygame.transform.scale(self._image, (20, 20))
+            import os
+            path = os.path.join(os.path.dirname(__file__), "assets", "brick.png")
+            self._image = pygame.image.load(path).convert_alpha()
         except:
             self._image = None
 
