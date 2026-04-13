@@ -169,7 +169,7 @@ while True:
                 starve_timer = 18.0 if not isinstance(food, Grape) else starve_timer
                 snake.segments.append(snake.segments[-1])
                 food = spawn_food()
-                move_delay += 0.05
+               
 
     # draw
     screen.fill((18, 20, 28))
