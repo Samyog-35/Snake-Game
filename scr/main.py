@@ -16,7 +16,7 @@ screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
 pygame.display.set_caption("Snake Game")
 clock  = pygame.time.Clock()
 font   = pygame.font.SysFont("arial", 22, bold=True)
-FPS    = 60
+FPS    = 120
 
 # create snake in the middle
     
