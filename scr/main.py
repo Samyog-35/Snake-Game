@@ -36,6 +36,7 @@ current_skin = ["Green"]
 color_index = 0
 state = "start"
 obstacles = []
+speed_boost_timer = [0.0]
 # spawn random food
 def spawn_food():
     """Spawns random food at a random spot."""
