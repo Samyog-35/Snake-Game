@@ -62,7 +62,13 @@ class Apple(Food):
         """Creates an Apple."""
         super().__init__(x, y)
         self._points = 10
-
+        try:
+            import os
+            path = os.path.join(os.path.dirname(__file__), "assets", "apple.png")
+            self._image = pygame.image.load(path).convert_alpha()
+            self._image = pygame.transform.scale(self._image, (20, 20))
+        except:
+            self._image = None
     def draw(self, screen):
         """Draws a red apple."""
         x = self._x * 20
