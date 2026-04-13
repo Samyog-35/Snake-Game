@@ -158,8 +158,7 @@ while True:
                     speed_boost_timer = [3.0]
                 if isinstance(food, Grape):
                     starve_timer = min(starve_timer + 5.0, 10.0)
-                    
-                starve_timer = 10.0
+                starve_timer = 10.0 if not isinstance(food, Grape) else starve_timer
                 snake.segments.append(snake.segments[-1])
                 food = spawn_food()
                 move_delay += 0.05
