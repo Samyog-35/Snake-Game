@@ -52,6 +52,7 @@ def spawn_food():
     
 
 food = spawn_food()
+move_delay += 0.01
 
 
 def spawn_obstacles(count=5):
