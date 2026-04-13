@@ -126,7 +126,9 @@ while True:
         starve_timer -= dt
         if starve_timer <= 0: 
             game_over = True 
-            death_cause = "You starved to death!"  
+            death_cause = "You starved to death!" 
+            
+             
             # slow down as timer runs out
         move_delay = 0.15 + (10.00 - starve_timer) * 0.015
         move_timer += dt
@@ -140,7 +142,7 @@ while True:
                     death_cause = "You hit the Obstacles!!!"
 
 
-                    
+
                 # wall collision
             hx, hy = snake.segments[0]
             if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
