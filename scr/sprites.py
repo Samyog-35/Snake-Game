@@ -165,10 +165,11 @@ class Obstacle:
 
     def draw(self, screen):
         """Draws the obstacle as a dark brown rectangle."""
-        x = self._x * 20
-        y = self._y * 20
-        w = self._w * 20
-        h = self._h * 20
+        for dx in range(self._w):
+            for dy in range(self._h):
+                x = (self._x + dx) * 20
+                y = (self._y + dx) * 20
+        
         pygame.draw.rect(screen, (255, 255, 255), (x, y, w, h))
 
     def __str__(self):
