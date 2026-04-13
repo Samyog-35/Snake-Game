@@ -16,7 +16,7 @@ screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
 pygame.display.set_caption("Snake Game")
 clock  = pygame.time.Clock()
 font   = pygame.font.SysFont("arial", 22, bold=True)
-FPS    = 720
+FPS    = 60
 
 # create snake in the middle
     
@@ -65,7 +65,7 @@ def spawn_obstacles(count=5):
 obstacles = spawn_obstacles()
 
 # move timer
-move_delay = 0.15
+move_delay = 0.10
 move_timer = 0.0
 
 def draw_start_screen():
