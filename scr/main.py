@@ -138,6 +138,9 @@ while True:
                 if snake.segments[0] in ob.get_cells():
                     game_over = True
                     death_cause = "You hit the Obstacles!!!"
+
+
+                    
                 # wall collision
             hx, hy = snake.segments[0]
             if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
