@@ -65,7 +65,7 @@ def spawn_obstacles(count=5):
 obstacles = spawn_obstacles()
 
 # move timer
-move_delay = 0.10
+move_delay = 0.18
 move_timer = 0.0
 
 def draw_start_screen():
