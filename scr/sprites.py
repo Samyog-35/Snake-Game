@@ -92,6 +92,13 @@ class Berry(Food):
         """Creates a Berry."""
         super().__init__(x, y)
         self._points = 20
+        try:
+            import os
+            path = os.path.join(os.path.dirname(__file__), "assets", "Berry.png")
+            self._image = pygame.image.load(path).convert_alpha()
+            self._image = pygame.transform.scale(self._image, (20, 20))
+        except:
+            self._image = None
 
     def draw(self, screen):
         """Draws a purple berry."""
@@ -113,6 +120,13 @@ class Peach(Food):
         """Creates a Peach."""
         super().__init__(x, y)
         self._points = 30
+        try:
+            import os
+            path = os.path.join(os.path.dirname(__file__), "assets", "peach.png")
+            self._image = pygame.image.load(path).convert_alpha()
+            self._image = pygame.transform.scale(self._image, (20, 20))
+        except:
+            self._image = None
 
     def draw(self, screen):
         """Draws an orange peach."""
@@ -134,6 +148,13 @@ class Grape(Food):
         """Creates a Grape."""
         super().__init__(x, y)
         self._points = 50
+        try:
+            import os
+            path = os.path.join(os.path.dirname(__file__), "assets", "Grape.png")
+            self._image = pygame.image.load(path).convert_alpha()
+            self._image = pygame.transform.scale(self._image, (20, 20))
+        except:
+            self._image = None
 
     def draw(self, screen):
         """Draws a dark purple grape."""
