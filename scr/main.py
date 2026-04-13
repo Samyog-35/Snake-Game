@@ -24,7 +24,7 @@ snake = Snake(COLS // 2, ROWS // 2)
 score = 0
 game_over = False
 death_cause = ""
-starve_timer = 10.0
+starve_timer = 18.0
 # skin colours
 skins = {
     "Green": (50, 200, 80),
