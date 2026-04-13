@@ -169,6 +169,10 @@ class Obstacle:
             for dy in range(self._h):
                 x = (self._x + dx) * 20
                 y = (self._y + dx) * 20
+                if self._image:
+                    screen.blit(self._image, (x, y))
+                else:
+                    pygame.draw.rect(screen, (60, 40, 20), (x, y, 20, 20))
         
         pygame.draw.rect(screen, (255, 255, 255), (x, y, w, h))
 
