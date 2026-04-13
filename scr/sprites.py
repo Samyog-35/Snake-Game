@@ -104,8 +104,11 @@ class Berry(Food):
         """Draws a purple berry."""
         x = self._x * 20
         y = self._y * 20
-        pygame.draw.rect(screen, (130, 0, 180), (x, y, 18, 18))
-
+        if self._image:
+            screen.blit(self._image, (x, y))
+        else:
+            pygame.draw.rect(screen, (130, 0, 180), (x, y, 18, 18))
+        
     def __str__(self):
         return f"Berry at ({self._x}, {self._y})"
 
@@ -132,9 +135,11 @@ class Peach(Food):
         """Draws an orange peach."""
         x = self._x * 20
         y = self._y * 20
-        pygame.draw.rect(screen, (255, 160, 80), (x, y, 18, 18))
-
-    def __str__(self):
+        if self._image:
+            screen.blit(self._image, (x, y))
+        else:
+            pygame.draw.rect(screen, (255, 160, 80), (x, y, 18, 18))
+        
         return f"Peach at ({self._x}, {self._y})"
 
     def __repr__(self):
@@ -160,8 +165,10 @@ class Grape(Food):
         """Draws a dark purple grape."""
         x = self._x * 20
         y = self._y * 20
-        pygame.draw.rect(screen, (90, 0, 140), (x, y, 18, 18))
-
+        if self._image:
+            screen.blit(self._image, (x, y))
+        else:
+            pygame.draw.rect(screen, (90, 0, 140), (x, y, 18, 18))
     def __str__(self):
         return f"Grape at ({self._x}, {self._y})"
 
