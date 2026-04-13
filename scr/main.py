@@ -104,7 +104,7 @@ while True:
                 snake.direction = (1, 0)
             elif event.key == pygame.K_r and game_over:
                 obstacles = spawn_obstacles()
-                starve_timer = 10.0
+                starve_timer = 18.0
                 #reset everything
                 snake = Snake(COLS//2,ROWS//2)
                 score = 0
@@ -165,8 +165,8 @@ while True:
                 if isinstance(food, Peach):
                     speed_boost_timer = [3.0]
                 if isinstance(food, Grape):
-                    starve_timer = min(starve_timer + 5.0, 10.0)
-                starve_timer = 10.0 if not isinstance(food, Grape) else starve_timer
+                    starve_timer = min(starve_timer + 5.0, 18.0)
+                starve_timer = 18.0 if not isinstance(food, Grape) else starve_timer
                 snake.segments.append(snake.segments[-1])
                 food = spawn_food()
                 move_delay += 0.05
