@@ -149,6 +149,12 @@ class Obstacle:
         self._w = w
         self._h = h
 
+        try:
+            self._image = pygame.image.load("assets/brick.png").convert_alpha()
+            self._image = pygame.transform.scale(self._image, (20, 20))
+        except:
+            self._image = None
+
     def get_cells(self):
         """Returns all grid cells this obstacle covers."""
         cells = []
