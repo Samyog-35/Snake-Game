@@ -133,7 +133,7 @@ while True:
             move_delay = 0.12
          # slow down as timer runs out
         else:
-            move_delay = 0.18 + (10.00 - starve_timer) * 0.015
+            move_delay = 0.18 + (18.00 - starve_timer) * 0.008
         move_timer += dt
         if move_timer >= move_delay:
             move_timer = 0.0
