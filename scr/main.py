@@ -52,7 +52,6 @@ def spawn_food():
     
 
 food = spawn_food()
-move_delay += 0.01
 
 
 def spawn_obstacles(count=5):
@@ -154,6 +153,7 @@ while True:
                 starve_timer = 10.0
                 snake.segments.append(snake.segments[-1])
                 food = spawn_food()
+                move_delay += 0.01 
 
     # draw
     screen.fill((18, 20, 28))
