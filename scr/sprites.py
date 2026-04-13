@@ -76,10 +76,8 @@ class Apple(Food):
         if self._image:
             screen.blit(self._image, (x, y))
         else:
-            if self._image:
-               screen.blit(self._image, (x, y))
-            else:
-               pygame.draw.rect(screen, (220, 40, 40), (x, y, 18, 18))                                                                        
+            pygame.draw.rect(screen, (220, 40, 40), (x, y, 18, 18)) 
+                                                                                   
     def __str__(self):
         return f"Apple at ({self._x}, {self._y})"
 
