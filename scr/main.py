@@ -104,7 +104,7 @@ while True:
             elif event.key == pygame.K_r and game_over:
                 obstacles = spawn_obstacles()
                 starve_timer = 10.0
-               #reset everything
+                #reset everything
                 snake = Snake(COLS//2,ROWS//2)
                 score = 0
                 game_over = False
