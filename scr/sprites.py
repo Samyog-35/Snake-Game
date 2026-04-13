@@ -1,4 +1,6 @@
 import pygame
+speed_boost_timer = [0.0]
+time_bonus = [0.0]
 
 class Snake:
     """This class creates and controls the snake."""
