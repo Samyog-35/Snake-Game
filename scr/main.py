@@ -149,7 +149,8 @@ while True:
             move_delay = 0.18 + (18.00 - starve_timer) * 0.008
 
 
-        move_timer += dt
+        if freeze_timer <= 0:
+            move_timer += dt
 
 
         if move_timer >= move_delay:
