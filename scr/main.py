@@ -178,7 +178,7 @@ while True:
                     score += food.get_points()
                     #speed boost fro 3 sec
                     if isinstance(food, Peach):
-                        speed_boost_timer[0] = [5.0]
+                        speed_boost_timer[0] = 5.0
                     if isinstance(food, Grape):
                         if starve_timer < 12:
                             starve_timer += 8.0
