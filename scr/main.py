@@ -132,6 +132,7 @@ while True:
     if state == "game" and not game_over:
         grape_timer += dt
         starve_timer -= dt
+        
         if starve_timer <= 0: 
             game_over = True 
             death_cause = "You starved to death!" 
