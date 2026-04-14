@@ -153,7 +153,7 @@ while True:
             move_timer = 0.0
             snake.move()
 
-            
+
             #obstacle collision 
             for ob in obstacles:
                 if snake.segments[0] in ob.get_cells():
@@ -186,6 +186,8 @@ while True:
                     snake.segments.append(snake.segments[-1])
                     food_list.remove(food)
                     food_list.append(spawn_food())
+
+                    
         if grape_timer >= 12.0:
             has_grape = any(isinstance(f, Grape) for f in food_list)
             if not has_grape:
