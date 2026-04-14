@@ -132,7 +132,7 @@ while True:
     if state == "game" and not game_over:
         grape_timer += dt
         starve_timer -= dt
-        
+
         if starve_timer <= 0: 
             game_over = True 
             death_cause = "You starved to death!" 
@@ -152,6 +152,9 @@ while True:
                     game_over = True
                     death_cause = "You hit the Obstacles!!!"
 
+        if grape_timer >= 12.0:
+    
+            has_grape = any(isinstance(f, Grape) for f in food_list)
 
 
                 # wall collision
