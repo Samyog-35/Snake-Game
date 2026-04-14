@@ -136,6 +136,9 @@ while True:
         if freeze_timer > 0:
             freeze_timer -= dt
             time_multiplier = 0
+            
+
+
         if starve_timer <= 0: 
             game_over = True 
             death_cause = "You starved to death!" 
