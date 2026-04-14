@@ -77,7 +77,7 @@ move_timer = 0.0
 
 def draw_start_screen():
     """ draws a screen """
-    screen.fill((18,20,28))
+    screen.blit(bg, (0, 0))
     title = font.render("SNAKE Game",True,(80,200,120))
     screen.blit(title, (220, 150))
     prompt = font.render("Press Enter Key To Play", True, (225,225,25))
