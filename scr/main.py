@@ -136,16 +136,24 @@ while True:
         if starve_timer <= 0: 
             game_over = True 
             death_cause = "You starved to death!" 
+
+
         if speed_boost_timer[0] > 0:
             speed_boost_timer[0] -= dt
             move_delay = 0.10
          # slow down as timer runs out
         else:
             move_delay = 0.18 + (18.00 - starve_timer) * 0.008
+
+
         move_timer += dt
+
+
         if move_timer >= move_delay:
             move_timer = 0.0
             snake.move()
+
+            
             #obstacle collision 
             for ob in obstacles:
                 if snake.segments[0] in ob.get_cells():
