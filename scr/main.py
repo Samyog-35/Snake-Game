@@ -194,9 +194,7 @@ while True:
                 food_list.append(
                     Grape(random.randint(0, COLS - 1),
                           random.randint(0, ROWS - 1)))
-            grape_timer = 0.0
-               
-
+            grape_timer = 0.0     
     # draw
     screen.fill((18, 20, 28))
     if state == "start":
