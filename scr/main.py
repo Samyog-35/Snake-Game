@@ -173,9 +173,9 @@ while True:
                     if isinstance(food, Grape):
                         starve_timer = min(starve_timer + 5.0, 18.0)
                         starve_timer = 18.0 if not isinstance(food, Grape) else starve_timer
-                        snake.segments.append(snake.segments[-1])
-                        food_list.remove(food)
-                        food_list.append(spawn_food())
+                    snake.segments.append(snake.segments[-1])
+                    food_list.remove(food)
+                    food_list.append(spawn_food())
                
 
     # draw
