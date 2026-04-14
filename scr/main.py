@@ -38,6 +38,7 @@ state = "start"
 obstacles = []
 speed_boost_timer = [0.0]
 # spawn random food
+food_list = []
 def spawn_food():
     """Spawns random food at a random spot."""
     while True:
@@ -49,6 +50,7 @@ def spawn_food():
                 blocked = True
         if not blocked:
             return random.choice([Apple, Berry, Peach, Grape])(x, y)
+food_list = [spawn_food(), spawn_food()]
 
     
 
