@@ -136,7 +136,8 @@ while True:
         if freeze_timer > 0:
             freeze_timer -= dt
             time_multiplier = 0
-            
+        starve_timer -= dt * time_multiplier
+        grape_timer += dt * time_multiplier
 
 
         if starve_timer <= 0: 
