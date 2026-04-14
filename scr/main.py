@@ -181,6 +181,9 @@ while True:
                     if isinstance(food, Apple):
                         starve_timer = min(starve_timer + 4.0, 18.0)
 
+                    if isinstance(food, Berry):
+                        freeze_timer = 5.0
+
                     #speed boost fro 3 sec
                     if isinstance(food, Peach):
                         speed_boost_timer[0] = 5.0
