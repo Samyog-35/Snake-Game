@@ -176,6 +176,10 @@ while True:
             for food in food_list[:]:
                 if snake.segments[0] == food.get_pos():
                     score += food.get_points()
+
+                    if isinstance(food, Apple):
+                        starve_timer = min(starve_timer + 4.0, 18.0)
+                        
                     #speed boost fro 3 sec
                     if isinstance(food, Peach):
                         speed_boost_timer[0] = 5.0
