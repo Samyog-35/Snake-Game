@@ -113,7 +113,8 @@ while True:
                 score = 0
                 game_over = False
                 death_cause = ""
-                food = spawn_food()
+                food_list.clear()
+                
                 speed_boost_timer[0] = 0.0
                 state = "game"
             elif event.key == pygame.K_1:
