@@ -171,7 +171,8 @@ while True:
                     if isinstance(food, Peach):
                         speed_boost_timer = [5.0]
                     if isinstance(food, Grape):
-                        starve_timer = min(starve_timer + 10.0, 18.0)
+                        if starve_timer < 12:
+                            starve_timer += 8.0
                     
                     snake.segments.append(snake.segments[-1])
                     food_list.remove(food)
