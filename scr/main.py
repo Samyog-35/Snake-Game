@@ -131,11 +131,11 @@ while True:
 
         # move snake on timer
     if state == "game" and not game_over:
+        time_multiplier = 1
+
         if freeze_timer > 0:
             freeze_timer -= dt
-        else:
-            starve_timer -= dt
-            grape_timer += dt
+            time_multiplier = 0
         if starve_timer <= 0: 
             game_over = True 
             death_cause = "You starved to death!" 
