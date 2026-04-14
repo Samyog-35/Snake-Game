@@ -152,13 +152,6 @@ while True:
                     game_over = True
                     death_cause = "You hit the Obstacles!!!"
 
-        if grape_timer >= 12.0:
-    
-            has_grape = any(isinstance(f, Grape) for f in food_list)
-            if not has_grape:
-                food_list.append(Grape(random.randint(0, COLS-1), random.randint(0, ROWS-1)))
-            grape_timer = 0.0
-
                 # wall collision
             hx, hy = snake.segments[0]
             if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
@@ -185,6 +178,7 @@ while True:
                     snake.segments.append(snake.segments[-1])
                     food_list.remove(food)
                     food_list.append(spawn_food())
+                    
                
 
     # draw
