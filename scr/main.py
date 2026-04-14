@@ -38,6 +38,7 @@ color_index = 0
 state = "start"
 obstacles = []
 speed_boost_timer = [0.0]
+freeze_timer = 0.0
 # spawn random food
 food_list = []
 def spawn_food():
@@ -179,7 +180,7 @@ while True:
 
                     if isinstance(food, Apple):
                         starve_timer = min(starve_timer + 4.0, 18.0)
-                        
+
                     #speed boost fro 3 sec
                     if isinstance(food, Peach):
                         speed_boost_timer[0] = 5.0
