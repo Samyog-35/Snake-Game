@@ -187,11 +187,13 @@ while True:
                     food_list.remove(food)
                     food_list.append(spawn_food())
 
-                    
+
         if grape_timer >= 12.0:
             has_grape = any(isinstance(f, Grape) for f in food_list)
             if not has_grape:
-                food_list.append(Grape(random.randint(0, COLS-1), random.randint(0, ROWS-1)))
+                food_list.append(
+                    Grape(random.randint(0, COLS - 1),
+                          random.randint(0, ROWS - 1)))
             grape_timer = 0.0
                
 
