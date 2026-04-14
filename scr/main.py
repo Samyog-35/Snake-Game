@@ -14,6 +14,8 @@ SCREEN_H = CELL * ROWS
 
 screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
 pygame.display.set_caption("Snake Game")
+bg = pygame.image.load(get_asset_path("Background.png")).convert()
+bg = pygame.transform.scale(bg, (SCREEN_W, SCREEN_H))
 clock  = pygame.time.Clock()
 font   = pygame.font.SysFont("arial", 22, bold=True)
 FPS    = 60
