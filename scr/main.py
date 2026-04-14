@@ -169,10 +169,10 @@ while True:
                     score += food.get_points()
                     #speed boost fro 3 sec
                     if isinstance(food, Peach):
-                        speed_boost_timer = [3.0]
+                        speed_boost_timer = [5.0]
                     if isinstance(food, Grape):
-                        starve_timer = min(starve_timer + 5.0, 18.0)
-                    starve_timer = 18.0 if not isinstance(food, Grape) else starve_timer
+                        starve_timer = min(starve_timer + 10.0, 18.0)
+                    
                     snake.segments.append(snake.segments[-1])
                     food_list.remove(food)
                     food_list.append(spawn_food())
