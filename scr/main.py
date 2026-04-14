@@ -54,7 +54,8 @@ food_list = [spawn_food(), spawn_food()]
 
     
 
-food = spawn_food()
+for food in food_list:
+    food.draw(screen)
 
 
 def spawn_obstacles(count=5):
