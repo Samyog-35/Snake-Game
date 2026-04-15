@@ -66,8 +66,8 @@ def draw_border():
 def spawn_food():
     """Spawns random food at a random spot."""
     while True:
-        x = random.randint(0, COLS - 1)
-        y = random.randint(0, ROWS - 1)
+        x = random.randint(1, COLS - 2)
+        y = random.randint(1, ROWS - 2)
         blocked = False
         for ob in obstacles:
             if (x, y) in ob.get_cells():
@@ -85,8 +85,8 @@ for food in food_list:
 def spawn_obstacles(count=5):
     obs = []
     for _ in range(count):
-        x = random.randint(0, COLS - 1)
-        y = random.randint(0, ROWS - 1)
+        x = random.randint(1, COLS - 2)
+        y = random.randint(1, ROWS - 2)
         obs.append(Obstacle(x, y,1,1))
     return obs
 obstacles = spawn_obstacles()
