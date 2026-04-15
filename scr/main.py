@@ -34,7 +34,7 @@ BORDER = 20
 TILE = 20
 # skin colours
 skins = {
-    "Green": (50, 200, 80),
+    "Purple": (160, 70, 200),
     "Red":   (220, 50, 50),
     "Blue":  (50, 130, 220),
     "Gold":  (220, 180, 30),
