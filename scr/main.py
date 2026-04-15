@@ -16,6 +16,8 @@ screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
 pygame.display.set_caption("Snake Game")
 bg = pygame.image.load(get_asset_path("Background.png")).convert()
 bg = pygame.transform.scale(bg, (SCREEN_W, SCREEN_H))
+brick_img = pygame.image.load(get_asset_path("brick.png")).convert_alpha()
+brick_img = pygame.transform.scale(brick_img, (CELL, CELL))
 clock  = pygame.time.Clock()
 font   = pygame.font.SysFont("arial", 22, bold=True)
 FPS    = 60
@@ -45,25 +47,11 @@ speed_boost_timer = [0.0]
 freeze_timer = 0.0
 # spawn random food
 food_list = []
-def draw_border():
-    # top wall
-    for x in range(0, SCREEN_W // CELL):
-        screen.blit(pygame.image.load(get_asset_path("brick.png")),
-                    (x * CELL, 30))
-    # bottom wall
-    for x in range(0, SCREEN_W // CELL):
-        screen.blit(pygame.image.load(get_asset_path("brick.png")),
-                    (x * CELL, SCREEN_H - CELL))
-
-    # left wall
-    for y in range(1, SCREEN_H // CELL - 1):
-        screen.blit(pygame.image.load(get_asset_path("brick.png")),
-                    (0, y * CELL))
-
-    # right wall
-    for y in range(1, SCREEN_H // CELL - 1):
-        screen.blit(pygame.image.load(get_asset_path("brick.png")),
-                    (SCREEN_W - CELL, y * CELL))
+def draw_border():  
+    # top
+    for x in range(SCREEN_W // CELL):
+        screen.blit(brick_img, (x * CELL, 30))
+    #bottom
 
 def spawn_food():
     """Spawns random food at a random spot."""
