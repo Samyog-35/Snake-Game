@@ -52,6 +52,15 @@ def draw_border():
     for x in range(SCREEN_W // CELL):
         screen.blit(brick_img, (x * CELL, 30))
     #bottom
+    for x in range(SCREEN_W // CELL):
+        screen.blit(brick_img, (x * CELL, SCREEN_H - CELL))
+
+    # left
+    for y in range(1, SCREEN_H // CELL - 1):
+        screen.blit(brick_img, (0, y * CELL))
+    #right
+    
+
 
 def spawn_food():
     """Spawns random food at a random spot."""
