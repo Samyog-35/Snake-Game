@@ -257,11 +257,7 @@ while True:
 
 
     #message for game over or any (screen,(28,32,46),(100,150,400,200))(game .rec(ren))
-    
-    
-    
-    
-    if game_over:
+    def draw_game_over():
         pygame.draw.rect(screen,(28,32,46),(100,150,400,200))
 
 
@@ -284,4 +280,6 @@ while True:
         hint_text = font.render("Press R to restart",True,(255,255,255))
         screen.blit( hint_text,(180,300))
     
+    if game_over:
+        draw_game_over()
     pygame.display.flip()
