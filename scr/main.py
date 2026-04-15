@@ -59,7 +59,8 @@ def draw_border():
     for y in range(1, SCREEN_H // CELL - 1):
         screen.blit(brick_img, (0, y * CELL))
     #right
-    
+    for y in range(1, SCREEN_H // CELL - 1):
+        screen.blit(brick_img, (SCREEN_W - CELL, y * CELL))
 
 
 def spawn_food():
