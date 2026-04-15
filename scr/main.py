@@ -28,6 +28,7 @@ game_over = False
 death_cause = ""
 starve_timer = 18.0
 grape_timer = 0.0
+BORDER = 20
 # skin colours
 skins = {
     "Green": (50, 200, 80),
