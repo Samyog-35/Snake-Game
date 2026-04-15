@@ -103,7 +103,30 @@ def draw_start_screen():
     controls = font.render("Eat fruits and surive", True,(130,138,160))
     screen.blit(controls,(170,310))
 
- 
+  #message for game over or any (screen,(28,32,46),(100,150,400,200))(game .rec(ren))
+def draw_game_over():
+    pygame.draw.rect(screen,(28,32,46),(100,150,400,200))
+
+
+    #game over text
+    over_text = font.render("GAME OVER", True,(230,80,60))
+    screen.blit(over_text,(220,170))
+
+
+    #death cause
+    cause_text = font.render(death_cause, True,(255,255,255))
+    screen.blit(cause_text,(150,220))
+
+
+    #final score
+    score_text2 = font.render(f"Final Score: {score}",True,(80,225,120))
+    screen.blit(score_text2,(190,260))
+
+
+    #restart hint
+    hint_text = font.render("Press R to restart",True,(255,255,255))
+    screen.blit( hint_text,(180,300))
+    
 
 
 while True:
@@ -252,34 +275,6 @@ while True:
     score_text = font.render(f"Score: {score}", True, (255, 255, 255))
     screen.blit(score_text, (10, 10))
 
-
-
-
-
-    #message for game over or any (screen,(28,32,46),(100,150,400,200))(game .rec(ren))
-    def draw_game_over():
-        pygame.draw.rect(screen,(28,32,46),(100,150,400,200))
-
-
-         #game over text
-        over_text = font.render("GAME OVER", True,(230,80,60))
-        screen.blit(over_text,(220,170))
-
-
-        #death cause
-        cause_text = font.render(death_cause, True,(255,255,255))
-        screen.blit(cause_text,(150,220))
-
-
-        #final score
-        score_text2 = font.render(f"Final Score: {score}",True,(80,225,120))
-        screen.blit(score_text2,(190,260))
-
-
-        #restart hint
-        hint_text = font.render("Press R to restart",True,(255,255,255))
-        screen.blit( hint_text,(180,300))
-    
     if game_over:
         draw_game_over()
     pygame.display.flip()
