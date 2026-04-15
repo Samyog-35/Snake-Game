@@ -211,9 +211,11 @@ while True:
                           random.randint(0, ROWS - 1)))
             grape_timer = 0.0     
     # draw
-    screen.fill((18, 20, 28))
     if state == "start":
         draw_start_screen()
+
+    elif state == "game":
+        screen.blit(bg, (0, 0))
     elif state == "game":
         timer_color = (230, 80, 60) if starve_timer < 4 else (255, 255, 255)
         timer_text = font.render(f"Time: {int(starve_timer)}", True, timer_color)
