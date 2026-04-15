@@ -241,7 +241,7 @@ while True:
         timer_text = font.render(f"Time: {int(starve_timer)}", True, timer_color)
         for food in food_list:
             food.draw(screen)
-        screen.blit(timer_text, (SCREEN_W // 2 - 30, 10))
+        screen.blit(timer_text, (SCREEN_W // 2 - timer_text.get_width() // 2, 10))
         for ob in obstacles:
             ob.draw(screen)
         for i, (gx, gy) in enumerate(snake.segments):
