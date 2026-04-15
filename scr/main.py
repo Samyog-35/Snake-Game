@@ -30,8 +30,7 @@ game_over = False
 death_cause = ""
 starve_timer = 18.0
 grape_timer = 0.0
-BORDER = 20
-TILE = 20
+
 # skin colours
 skins = {
     "Purple": (160, 70, 200),
