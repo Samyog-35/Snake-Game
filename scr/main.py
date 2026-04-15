@@ -86,7 +86,7 @@ def spawn_obstacles(count=5):
     obs = []
     for _ in range(count):
         x = random.randint(1, COLS - 2)
-        y = random.randint(1, ROWS - 2)
+        y = random.randint(2, ROWS - 3)
         obs.append(Obstacle(x, y,1,1))
     return obs
 obstacles = spawn_obstacles()
