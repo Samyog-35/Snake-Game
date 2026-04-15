@@ -67,7 +67,7 @@ def spawn_food():
     """Spawns random food at a random spot."""
     while True:
         x = random.randint(1, COLS - 2)
-        y = random.randint(1, ROWS - 2)
+        y = random.randint(2, ROWS - 3)
         blocked = False
         for ob in obstacles:
             if (x, y) in ob.get_cells():
