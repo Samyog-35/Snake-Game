@@ -29,6 +29,7 @@ death_cause = ""
 starve_timer = 18.0
 grape_timer = 0.0
 BORDER = 20
+TILE = 20
 # skin colours
 skins = {
     "Green": (50, 200, 80),
@@ -44,6 +45,12 @@ speed_boost_timer = [0.0]
 freeze_timer = 0.0
 # spawn random food
 food_list = []
+def draw_border():
+    # top wall
+    for x in range(0, SCREEN_W // CELL):
+        screen.blit(pygame.image.load(get_asset_path("brick.png")),
+                    (x * CELL, 30))
+
 def spawn_food():
     """Spawns random food at a random spot."""
     while True:
