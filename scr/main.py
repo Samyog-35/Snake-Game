@@ -143,7 +143,7 @@ while True:
                 speed_boost_timer[0] = 0.0
                 state = "game"
             elif event.key == pygame.K_1:
-                current_skin[0] = "Green"
+                current_skin[0] = "Purple"
             elif event.key == pygame.K_2:
                 current_skin[0] = "Red"
             elif event.key == pygame.K_3:
