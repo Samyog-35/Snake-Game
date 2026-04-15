@@ -45,7 +45,7 @@ obstacles = []
 speed_boost_timer = [0.0]
 freeze_timer = 0.0
 # spawn random food
-food_list = []
+
 def draw_border():  
     # top
     for x in range(SCREEN_W // CELL):
@@ -76,9 +76,6 @@ def spawn_food():
 food_list = [spawn_food(), spawn_food()]
 
     
-
-for food in food_list:
-    food.draw(screen)
 
 
 def spawn_obstacles(count=5):
