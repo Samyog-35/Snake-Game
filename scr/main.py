@@ -190,7 +190,7 @@ while True:
 
                 # wall collision
             hx, hy = snake.segments[0]
-            if hx < 0 or hy < 0 or hx >= COLS or hy >= ROWS: 
+            if hx <= 0 or hx >= COLS - 1 or hy <= 1 or hy >= ROWS - 1: 
                 game_over = True
                 death_cause = "You hit The wall!!!" 
 
