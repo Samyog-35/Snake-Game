@@ -50,7 +50,7 @@ food_list = []
 def draw_border():  
     # top
     for x in range(SCREEN_W // CELL):
-        screen.blit(brick_img, (x * CELL, 30))
+        screen.blit(brick_img, (x * CELL, 10))
     #bottom
     for x in range(SCREEN_W // CELL):
         screen.blit(brick_img, (x * CELL, SCREEN_H - CELL))
