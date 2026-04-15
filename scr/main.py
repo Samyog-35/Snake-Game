@@ -50,6 +50,20 @@ def draw_border():
     for x in range(0, SCREEN_W // CELL):
         screen.blit(pygame.image.load(get_asset_path("brick.png")),
                     (x * CELL, 30))
+    # bottom wall
+    for x in range(0, SCREEN_W // CELL):
+        screen.blit(pygame.image.load(get_asset_path("brick.png")),
+                    (x * CELL, SCREEN_H - CELL))
+
+    # left wall
+    for y in range(1, SCREEN_H // CELL - 1):
+        screen.blit(pygame.image.load(get_asset_path("brick.png")),
+                    (0, y * CELL))
+
+    # right wall
+    for y in range(1, SCREEN_H // CELL - 1):
+        screen.blit(pygame.image.load(get_asset_path("brick.png")),
+                    (SCREEN_W - CELL, y * CELL))
 
 def spawn_food():
     """Spawns random food at a random spot."""
